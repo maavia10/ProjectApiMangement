@@ -1,0 +1,19 @@
+{% extends 'SonataAdminBundle::standard_layout.html.twig' %}
+
+{% block stylesheets %}
+    {{  parent() }}
+    <style>
+        .login-logo a div img {
+            width: auto !important;
+        }
+        .logo img{
+            max-width: none !important;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ asset('bundles/sonatatranslation/css/styles/sonata-translation.css') }}">
+{% endblock %}
+{% block side_bar_after_nav %}
+    <p class="text-center small" style="border-top: 1px solid #444444; padding-top: 10px">
+        <a href="http://thedevclan.co.uk" rel="noreferrer" target="_blank">The Developer Clan</a>
+    </p>
+{% endblock %}
