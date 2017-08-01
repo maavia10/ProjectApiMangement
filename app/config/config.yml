@@ -71,6 +71,7 @@ doctrine:
                     ApplicationSonataUserBundle: ~
                     SonataUserBundle: ~
                     FOSUserBundle: ~
+                    AppBundle: ~
 # Swiftmailer Configuration
 swiftmailer:
     transport: '%mailer_transport%'
@@ -127,6 +128,5 @@ sonata_user:
     manager_type: orm # can be orm or
     admin:
         user:
-            class: Application\Sonata\UserBundle\Admin\UserAdmin
             translation:    SonataUserBundle
 

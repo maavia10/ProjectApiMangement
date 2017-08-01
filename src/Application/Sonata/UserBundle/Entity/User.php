@@ -11,6 +11,9 @@
 
 namespace Application\Sonata\UserBundle\Entity;
 
+use AppBundle\Entity\Project;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\Mapping as ORM;
 use Sonata\UserBundle\Entity\BaseUser as BaseUser;
 
 /**
@@ -29,7 +32,10 @@ class User extends BaseUser
      * @var int $id
      */
     protected $id;
-
+    /**
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Project",mappedBy="user")
+     */
+    protected $projects;
     /**
      * Get id
      *
@@ -38,5 +44,14 @@ class User extends BaseUser
     public function getId()
     {
         return $this->id;
+    }
+    public function addProject(Project $project)
+    {
+        $this->projects[] = $project;
+    }
+    public function __construct()
+    {
+        $this->projects=new ArrayCollection();
+        parent::__construct();
     }
 }

@@ -9,6 +9,9 @@
         <id name="id" column="id" type="integer">
             <generator strategy="AUTO" />
         </id>
+        <many-to-many target-entity="AppBundle\Entity\Project"  field="projects">
+
+        </many-to-many>
 
     </entity>
 

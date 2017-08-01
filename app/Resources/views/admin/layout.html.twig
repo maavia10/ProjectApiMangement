@@ -13,7 +13,28 @@
     <link rel="stylesheet" href="{{ asset('bundles/sonatatranslation/css/styles/sonata-translation.css') }}">
 {% endblock %}
 {% block side_bar_after_nav %}
+
+    <p><a class="logout-button" href="{{ path('sonata_user_admin_security_logout') }}">Logout</a></p>
     <p class="text-center small" style="border-top: 1px solid #444444; padding-top: 10px">
         <a href="http://thedevclan.co.uk" rel="noreferrer" target="_blank">The Developer Clan</a>
     </p>
+<style>
+    .logout-button:link, .logout-button:visited {
+        display: block;
+        padding: 0.2em;
+        line-height: 1.4;
+        background-color: #f3f3f3;
+        border: 1px solid black;
+        color: #000 !important;
+        text-decoration: none;
+        text-align: center;
+        width:100%;
+    }
+
+    .logout-button:hover {
+        background-color: #fff;
+        color: #3c3c3c;
+    }
+
+</style>
 {% endblock %}
